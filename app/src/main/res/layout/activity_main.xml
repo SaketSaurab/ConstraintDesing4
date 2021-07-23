@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/tv_topic_you_love"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0583ea"
+        android:drawablePadding="20dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="30dp"
+        android:text="@string/what_topic_do_you_love"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:drawableLeftCompat="@drawable/back" />
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraint_bottom_continue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_topic_you_love"
+        app:layout_constraintVertical_bias="0.0">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/left_side"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/main"
+                app:layout_constraintRight_toLeftOf="@+id/right_side"
+                app:layout_constraintLeft_toLeftOf="@+id/main"
+                app:layout_constraintTop_toTopOf="@+id/main">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/books"
+                    style="@style/cd_white"
+                    android:background="@drawable/whitecard"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/left_side">
+                    <TextView
+                        style="@style/tv_blue"
+                        android:text="@string/books" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/news"
+                    style="@style/cd_white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/books">
+                    <TextView
+                        style="@style/tv_blue"
+                        android:text="@string/news" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/entertainment"
+                    style="@style/cd_white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/news">
+
+                    <TextView
+                        style="@style/tv_blue"
+                        android:text="@string/entertainment" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/technology"
+                    style="@style/cd_white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/entertainment">
+                    <TextView
+                        style="@style/tv_blue"
+                        android:text="@string/technology" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/grammer"
+                    style="@style/cd_white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/technology">
+                    <TextView
+                        style="@style/tv_blue"
+                        android:text="@string/grammer" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/right_side"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/main"
+                app:layout_constraintLeft_toRightOf="@+id/left_side"
+                app:layout_constraintRight_toRightOf="@+id/main"
+                app:layout_constraintTop_toTopOf="@+id/main">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/podcasts"
+                    style="@style/cd_white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/right_side">
+                    <TextView
+                        style="@style/tv_blue"
+                        android:text="@string/podcasts" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/business"
+                    style="@style/cd_white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/podcasts">
+
+                    <TextView
+                        style="@style/tv_blue"
+                        android:text="@string/business" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/sports"
+                    style="@style/cd_white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/business">
+
+                    <TextView
+                        style="@style/tv_blue"
+                        android:text="@string/sports" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pronounciation"
+                    app:layout_constraintTop_toBottomOf="@id/sports"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    style="@style/cd_white">
+
+                    <TextView
+                        style="@style/tv_blue"
+                        android:text="@string/pronounciation" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/health"
+                    app:layout_constraintTop_toBottomOf="@id/pronounciation"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    style="@style/cd_white">
+
+                    <TextView
+                        style="@style/tv_blue"
+                        android:text="@string/health" />
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_bottom_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0583ea"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/tv_button_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:drawablePadding="20dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="@string/continuebutton"
+            android:textColor="#0583ea"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

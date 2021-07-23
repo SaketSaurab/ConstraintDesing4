@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ConstraintDesign4</string>
+    <string name="news">News</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="what_topic_do_you_love">What topic do you love?</string>
+    <string name="books">Books</string>
+    <string name="technology">Technology</string>
+    <string name="grammer">Grammar</string>
+    <string name="podcasts">Podcasts</string>
+    <string name="business">Business</string>
+    <string name="sports">Sports</string>
+    <string name="pronounciation">Pronunciation</string>
+    <string name="health">Health</string>
+    <string name="continuebutton">Continue</string>
+</resources>
